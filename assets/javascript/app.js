@@ -16,15 +16,18 @@ function createButtons(){
 // fuck yeah, working.  Need to space them
 createButtons();
 
+var count = 15;
+
 // clicky click click
-$("btn").on("click", function () {
+$(".btn").on("click", function () {
+    console.log("something was clicked");
     var food = $(this).attr("data-value");
-    var searchWord = "http://api.giphy.com/v1/gifs/search?q=" + food + "&api_key=sCO38OYZoooIJbbII7aEHpaxR3S04J3W"
+    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + food + "&limit=" + count + "&api_key=sCO38OYZoooIJbbII7aEHpaxR3S04J3W";
 
     $.ajax({
-        url: searchWord,
+        url: queryURL,
         method: "GET"
-    }).done(function(response) {
+    }).then(function(response) {
         console.log(response);
     });
 
