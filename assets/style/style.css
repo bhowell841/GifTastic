@@ -1,0 +1,14 @@
+.btn {
+    border: 1px solid black;
+    margin: 5px;
+    background-color: azure;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: #57636e;
+}
+
+.btn:focus {
+    outline: 0;
+}
