@@ -7,6 +7,14 @@
     </head>
     <body>
 
+        <!-- Image and text -->
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+            <img id="nav" src="/assets/images/giphy.png" width="60" height="30" class="d-inline-block align-top" alt="">
+            Get Your GIF On
+            </a>
+        </nav>
+
         <div class="container">
 
             <!--add a header/jumbotron later  -->
@@ -17,13 +25,19 @@
                     </div>
                 </div>
                 <div class="col-md-5">
-                    <!-- put the form in here later -->
+                        <form id="gif-form">
+                            <label for="gif-input">Add Your Own Button:</label>
+                            <input type="text" id="gif-input"><br>
+                          
+                            <!-- Button triggers new GIF button to be added -->
+                            <input id="add-gif" type="submit" value="Submit">
+                        </form>  
                 </div>
             </div>
 
             <div class="row">  
                 <div id="showGif">
-
+                    
                 </div>
             </div>
         </div>

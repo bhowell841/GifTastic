@@ -12,3 +12,13 @@
 .btn:focus {
     outline: 0;
 }
+
+img {
+    height: 150px;
+    width: 200px;
+}
+
+#nav {
+    height: 30px;
+    width: 100px;
+}
