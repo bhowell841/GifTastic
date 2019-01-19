@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-pirates = ["Jack Sparrow", "Anne Bonny", "Blackbeard", "Calico Jack", "Charles Vane", "Captain Flint", "Davy Jones", "Kraken", "Guinness"];
+pirates = ["Jack Sparrow", "Anne Bonny", "Blackbeard", "Calico Jack", "Charles Vane", "Captain Flint", "Billy Bones", "Davy Jones", "Kraken", "Guinness"];
 
 // create dem buttons
 function createButtons(){
@@ -20,7 +20,7 @@ function createButtons(){
 createButtons();
 
 // set the count to how many returns we want from giphy
-var count = 15;
+var count = 10;
 
 // clicky click click
 $(".btn").on("click", function () {
@@ -51,7 +51,7 @@ function displayGif() {
                 giphyImg.attr("src", response.data[i].images.downsized_still.url);
 				giphyImg.attr("data-still", response.data[i].images.downsized_still.url);
                 giphyImg.attr("data-animate", response.data[i].images.original.url);
-				giphyImg.attr("data-state", "still");
+				giphyImg.attr("data-state", "still"); // try changing this to true
 				giphyImg.attr("class", "gif");
 
                 // append to the div's
@@ -79,25 +79,27 @@ $("#add-gif").on("click", function(event) {
 
 // Animate the img
 function animate() {
-    // set the variable
-    var state = $(this).attr(data-state);
-    var gifImage = $(this).attr(data-animate);
-    var still = $(this).attr(data-still);
+    // set the variable state to the data-state attribute
+    var state = $(this).attr("data-state");
 
+    // if the state is still change the attribute to animate and show the gif
     if (state === "still") {
+        var gifImage = $(this).attr("data-animate");
         $(this).attr("src", gifImage);
 		$(this).attr("data-state", "animate");
-		}
-
+        }
+        
+    // if the state is animate change the attribute to still and show the still
     else if (state === "animate") {
+        var still = $(this).attr("data-still");
         $(this).attr("src", still);
         $(this).attr("data-state", "still");
-    }
-    
+    }  
 } // end function
 
 // That thing he taught us so a dynamically made button works, cause they didn't work
 $(document).on("click", ".btn", displayGif);
+// Click on the gif to animate 
 $(document).on("click", ".gif", animate);
 
 
