@@ -1,18 +1,18 @@
 $(document).ready(function () {
 
-foods = ["pizza", "spaghetti", "worms", "cereal", "twinkies", "Jack Sparrow", "Guinness"];
+pirates = ["Jack Sparrow", "Anne Bonny", "Blackbeard", "Calico Jack", "Charles Vane", "Captain Flint", "Davy Jones", "Kraken", "Guinness"];
 
 // create dem buttons
 function createButtons(){
     // clear the buttons so their are no repeats
     $("#buttons").empty();
     // loop through the array
-    for (i = 0; i < foods.length; i++) {
+    for (i = 0; i < pirates.length; i++) {
         // for each element give it a class, value and a text and display on the DOM
         var gifButton = $("<buttons>");
         gifButton.addClass("btn");
-        gifButton.attr("data-value", foods[i]);
-        gifButton.text(foods[i]);
+        gifButton.attr("data-value", pirates[i]);
+        gifButton.text(pirates[i]);
         $("#buttons").append(gifButton)
     }
 }
@@ -28,8 +28,8 @@ $(".btn").on("click", function () {
 }); // end the click
 
 function displayGif() {
-    var food = $(this).attr("data-value");
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + food + "&limit=" + count + "&api_key=sCO38OYZoooIJbbII7aEHpaxR3S04J3W";
+    var pirate = $(this).attr("data-value");
+    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + pirate + "&limit=" + count + "&api_key=sCO38OYZoooIJbbII7aEHpaxR3S04J3W";
 
     $.ajax({
         url: queryURL,
@@ -69,19 +69,37 @@ $("#add-gif").on("click", function(event) {
     // Get the new value from the form
     var newWord = $("#gif-input").val().trim();
     // push it to the array
-    foods.push(newWord);
+    pirates.push(newWord);
     // call teh function to create a button
     createButtons();
     return;
 }); // end the click event
 
+
+
+// Animate the img
+function animate() {
+    // set the variable
+    var state = $(this).attr(data-state);
+    var gifImage = $(this).attr(data-animate);
+    var still = $(this).attr(data-still);
+
+    if (state === "still") {
+        $(this).attr("src", gifImage);
+		$(this).attr("data-state", "animate");
+		}
+
+    else if (state === "animate") {
+        $(this).attr("src", still);
+        $(this).attr("data-state", "still");
+    }
+    
+} // end function
+
 // That thing he taught us so a dynamically made button works, cause they didn't work
 $(document).on("click", ".btn", displayGif);
-
+$(document).on("click", ".gif", animate);
 
 
 }); // end of the document ready
  
-// click s for search the name
-// show results on the page
-// attach 3 data attr to each img, may need a data.state
