@@ -8,7 +8,7 @@ body {
     width: 100%;
     /* height: 960px; */
     /* background-image: url(../images/bones.jpg); */
-    /* background-image: url(../images/flag.jpg); */
+    /* background-image: url(../images/Blacksails.jpg); */
     background-image: url(../images/skull.jpg);
     text-align: center;
     background-repeat: no-repeat;
@@ -60,7 +60,7 @@ img {
 
 #gif-form {
     font-family: 'MeieScript', cursive;
-    margin: 5px;    
+    margin: 5px;   
 }
 
 #showGif {
@@ -72,6 +72,8 @@ img {
 }
 
 .myDiv {
-	display: inline-block;
+    display: inline-block;
+        
+
 }
 
