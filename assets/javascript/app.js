@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-pirates = ["Jack Sparrow", "Anne Bonny", "Blackbeard", "Calico Jack", "Charles Vane", "Captain Flint", "Billy Bones", "Davy Jones", "Kraken", "Guinness"];
+pirates = ["Anne Bonny", "Blackbeard", "Calico Jack", "Charles Vane", "Captain Flint", "Billy Bones"];
 
 // create dem buttons
 function createButtons(){
