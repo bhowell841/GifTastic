@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
 pirates = ["Anne Bonny", "Edward Teach", "Calico Jack", "Charles Vane", "Captain Flint", "Billy Bones"];
+var sound= new Audio("./assets/images/BlackSails.mp3");
 
 // create dem buttons
 function createButtons(){
@@ -77,7 +78,9 @@ $("#add-gif").on("click", function(event) {
     return;
 }); // end the click event
 
-
+$(".btn").on("click", function(){
+    sound.play();
+});
 
 // Animate the img
 function animate() {
