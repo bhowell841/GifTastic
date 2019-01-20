@@ -32,17 +32,11 @@ body {
 }
 
 img {
-    display: block;
-    float: left;
     height: 150px;
     width: 200px;
     /* border: 2px solid silver; */
     border-radius: 5px;
     margin: 5px
-}
-p {
-    display: block;
-    float: left;
 }
 
 #nav {
@@ -64,12 +58,20 @@ p {
     padding: 30px;
 }
 
+#gif-form {
+    font-family: 'MeieScript', cursive;
+    margin: 5px;    
+}
+
 #showGif {
+    float: left;
     padding: 5px;
     height: 500px;
     font-family: 'MeieScript', cursive;
     color: silver;
 }
 
-
+.myDiv {
+	display: inline-block;
+}
 

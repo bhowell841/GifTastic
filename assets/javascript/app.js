@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-pirates = ["Anne Bonny", "Blackbeard", "Calico Jack", "Charles Vane", "Captain Flint", "Billy Bones"];
+pirates = ["Anne Bonny", "Edward Teach", "Calico Jack", "Charles Vane", "Captain Flint", "Billy Bones"];
 
 // create dem buttons
 function createButtons(){
@@ -43,21 +43,23 @@ function displayGif() {
         for (i=0; i<count; i++){
             // console.log(response.data[i].rating)
                 // create a div, a <p> and <img> for each return
-                var myDiv = $("<div>");
+                var myDiv = $("<div class='myDiv'>");
+                
                 var p = $("<p>").text("Rating: " + response.data[i].rating);
                 var giphyImg = $("<img>");
-
+                p.attr("class", "gif")
                 // set the images attributes
                 giphyImg.attr("src", response.data[i].images.downsized_still.url);
 				giphyImg.attr("data-still", response.data[i].images.downsized_still.url);
                 giphyImg.attr("data-animate", response.data[i].images.original.url);
-				giphyImg.attr("data-state", "still"); // try changing this to true
+				giphyImg.attr("data-state", "still"); 
 				giphyImg.attr("class", "gif");
 
                 // append to the div's
-                myDiv.append(giphyImg, p);
+                myDiv.prepend(p);
+                myDiv.prepend(giphyImg);
                 // put it on the DOM
-                $("#showGif").append(myDiv);
+                $("#showGif").prepend(myDiv);
             }
         });
     }// end the function
