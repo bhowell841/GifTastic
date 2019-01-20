@@ -16,9 +16,9 @@ body {
 }
 
 .btn {
-    border: 5px solid silver;
+    border: 2px solid #7c8288;
     margin: 5px;
-    background-color: azure;
+    background-color: lightgray;
     font-family: 'Meie Script', cursive;
 }
 
@@ -32,11 +32,17 @@ body {
 }
 
 img {
+    display: block;
+    float: left;
     height: 150px;
     width: 200px;
-    border: 2px solid silver;
+    /* border: 2px solid silver; */
     border-radius: 5px;
     margin: 5px
+}
+p {
+    display: block;
+    float: left;
 }
 
 #nav {
@@ -45,7 +51,7 @@ img {
 }
 .navbar-brand{
     font-family: 'Meie Script', cursive;
-    font-size: 30px;
+    font-size: 36px;
     color: silver;
 }
 
@@ -59,9 +65,11 @@ img {
 }
 
 #showGif {
-    display: flex;
     padding: 5px;
     height: 500px;
     font-family: 'MeieScript', cursive;
     color: silver;
 }
+
+
+

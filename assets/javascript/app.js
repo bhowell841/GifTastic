@@ -29,7 +29,7 @@ $(".btn").on("click", function () {
 
 function displayGif() {
     var pirate = $(this).attr("data-value");
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + pirate + "&limit=" + count + "&api_key=sCO38OYZoooIJbbII7aEHpaxR3S04J3W";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + pirate + "&limit=" + count + "&api_key=sCO38OYZoooIJbbII7aEHpaxR3S04J3W";
 
     $.ajax({
         url: queryURL,
