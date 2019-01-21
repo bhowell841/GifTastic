@@ -61,6 +61,7 @@ function displayGif() {
                 myDiv.prepend(giphyImg);
                 // put it on the DOM
                 $("#showGif").prepend(myDiv);
+                sound.play();
             }
         });
     }// end the function
@@ -73,14 +74,16 @@ $("#add-gif").on("click", function(event) {
     var newWord = $("#gif-input").val().trim();
     // push it to the array
     pirates.push(newWord);
-    // call teh function to create a button
+    // call the function to create a button
     createButtons();
     return;
 }); // end the click event
 
-$(".btn").on("click", function(){
-    sound.play();
-});
+
+// $(".btn").on("click", function(){
+//     sound.play();
+// });
+
 
 // Animate the img
 function animate() {
@@ -104,6 +107,7 @@ function animate() {
 
 // That thing he taught us so a dynamically made button works, cause they didn't work
 $(document).on("click", ".btn", displayGif);
+
 // Click on the gif to animate 
 $(document).on("click", ".gif", animate);
 
