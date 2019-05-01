@@ -1,5 +1,5 @@
 # GifTastic
-Website the calls the giphy api and returns the search from your button click.
+Website that calls the giphy api and returns the search from your button click.
 
 
 # Overview
