@@ -28,5 +28,5 @@ Website the calls the giphy api and returns the search from your button click.
 <br />
 <br />
 
-### Results after cling the "Jack Sparrow" button
+### Results after clicking the "Jack Sparrow" button
 <img width="1133" alt="Screen Shot 2019-05-01 at 12 20 11 AM" src="https://user-images.githubusercontent.com/17474969/57005566-e909fd80-6ba6-11e9-8bc0-9d28ca0424f5.png">
