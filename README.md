@@ -14,7 +14,7 @@ Website that calls the giphy api and returns the search from your button click.
   
 # Screenshots
 ### Main Page
-<img width="1374" alt="Screen Shot 2019-05-01 at 12 00 39 AM" src="https://user-images.githubusercontent.com/17474969/57005326-3edda600-6ba5-11e9-8237-e048bb1ccb53.png">
+<img width="1378" alt="Screen Shot 2019-05-01 at 8 42 43 PM" src="https://user-images.githubusercontent.com/17474969/57051882-bf59e080-6c51-11e9-96dc-239bf037a80f.png">
 <br />
 <br />
 
