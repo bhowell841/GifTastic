@@ -12,8 +12,9 @@ Website that calls the giphy api and returns the search from your button click.
   <li>Input form where you can type a query and it'll put a button on the page that works</li>
 </ul>
 
-## Visit the site:  
+# Visit the site:  
 https://bhowell841.github.io/GifTastic/
+<br />
 <br />
   
 # Screenshots
